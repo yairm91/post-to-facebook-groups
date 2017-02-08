@@ -9,12 +9,7 @@ from facepy import GraphAPI
 # get api from here  https://developers.facebook.com/tools/explorer
 
 
-api = "FILL YOUR API Access Token FROM THE ABOVE URL"
-
-
-
-
-
+api = ""
 
 
 graph = GraphAPI(api)
@@ -22,7 +17,7 @@ graph = GraphAPI(api)
 message = '''
 
 
-Add all your contents to be posted to facebook groups here
+בדיקה 1 2 3
 
 
 
@@ -33,12 +28,10 @@ Add all your contents to be posted to facebook groups here
 # Find the ids of your desired groups from http://lookup-id.com/  
 # and add this in this array groups
 
-groups = [ 'groupid1', 'groupid2', 'groupid3']
-
+groups = ['']
 
 
 for group_id in groups:
-	print "Posting to " + 'http://www.facebook.com/groups/' + str(group_id)
-	graph.post(path =str(group_id) + '/feed', message=message)
-	time.sleep(10)
-print "Done"
+    graph.post(path=str(group_id) + "/feed", message=message)
+    time.sleep(10)
+print("Done")
